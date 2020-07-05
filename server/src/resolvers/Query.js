@@ -1,3 +1,4 @@
 module.exports = {
-  totalLists: () => 5,
+  totalLists: (parent, args, { db }) => db.collection('lists').estimatedDocumentCount(),
+  allLists: (parent, args, { db }) => db.collection('lists').find().toArray(),
 };

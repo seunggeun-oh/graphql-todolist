@@ -1,3 +1,14 @@
+type TodoList {
+  title: String!
+  author: String!
+  status: String
+}
+
 type Query {
   totalLists: Int!
+  allLists: [TodoList!]
+}
+
+type Mutation {
+  postPhoto: [TodoList!]
 }
